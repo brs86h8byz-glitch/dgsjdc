@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Attendance System</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#0f5132,#198754);
+}
+
+/* University Header */
+.top-bar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    padding:25px;
+    color:white;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+}
+
+.university h1{
+    margin:0;
+    font-size:35px;
+}
+
+.university h3{
+    margin-top:8px;
+    font-weight:normal;
+    letter-spacing:2px;
+}
+
+/* Main Title */
+.title{
+    text-align:center;
+    color:white;
+    margin-top:20px;
+}
+
+.title h4{
+    letter-spacing:4px;
+    font-weight:normal;
+}
+
+.title h1{
+    font-size:60px;
+    margin:15px 0;
+}
+
+.title span{
+    color:#90EE90;
+}
+
+.title p{
+    font-size:20px;
+}
+
+/* Form Box */
+.box{
+    width:500px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.3);
+}
+
+.box h2{
+    text-align:center;
+    color:#198754;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    background:#198754;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#146c43;
+}
+
+#result{
+    margin-top:15px;
+    text-align:center;
+    color:green;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+
+    <img src="uietlogo copy.jpg" alt="University Logo" class="logo">
+    
+
+    <div class="university">
+        <h1>UIET - Panjab University, Chandigarh</h1>
+        <h3>UNIVERSITY INSTITUTE OF ENGINEERING & TECHNOLOGY</h3>
+    </div>
+
+</div>
+
+<div class="title">
+
+    <h4>STUDENT ATTENDANCE MANAGEMENT SYSTEM</h4>
+
+    <h1>Online <span>Attendance</span> System</h1>
+
+    <p>
+        This system helps teachers manage and check
+        student attendance easily.
+    </p>
+
+</div>
+
+<div class="box">
+
+    <h2>Attendance Entry Form</h2>
+
+    <label>year</label>
+    <select id="YEAR">
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+    </select>
+
+    <label>Branch</label>
+    <select id="br">
+        <option>CSE</option>
+        <option>IT</option>
+        <option>ECE</option>
+        <option>EEE</option>
+        <option>MECH</option>
+        <option>BIOTECH</option>
+    </select>
+
+    <label>Section</label>
+    <select id="sec">
+        <option>A</option>
+        <option>B</option>
+    </select>
+
+    <button onclick="showData()">Submit</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+
+function showData()
+{
+    let c = document.getElementById("cls").value;
+    let b = document.getElementById("br").value;
+    let s = document.getElementById("sec").value;
+
+    document.getElementById("result").innerHTML =
+    "Selected : " + c + " | " + b + " | Section " + s;
+}
+
+</script>
+
+</body>
+</html>
